@@ -1,0 +1,200 @@
+@import url("https://fonts.google.com/specimen/Hanken+Grotesk");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 600px;
+  height: 450px;
+  box-shadow: 2px 3px 6px 0 rgba(45, 85, 255, 0.3);
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* first block */
+
+.firstDiv {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.firstDiv h3 {
+  margin-top: 40px;
+  color: hsl(0, 0%, 100%, 0.7);
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to top,
+    hsl(252, 100%, 67%, 0.3),
+    30%,
+    hsla(241, 81%, 54%)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* styling for the center score */
+.circle p:first-child {          
+  text-align: center;
+  color: hsl(0, 0%, 100%, 0.8);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.circle p:last-child {
+  color: hsl(0, 0%, 100%, 0.5);
+}
+
+.firstDiv-footer {
+  text-align: center;
+  color: hsl(0, 0%, 100%, 0.6);
+  font-size: 18px;
+}
+
+.footer h2 {
+  margin-bottom: 20px;
+  color: hsl(0, 0%, 100%, 0.8);
+}
+
+/* second block */
+
+.secondDiv {
+  text-align: center;
+  margin: 0px 20px;
+}
+
+.resultBox {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+  justify-content: space-between;
+  background: green;
+  margin-bottom: 12px;
+  border-radius: 10px;
+}
+
+.resultBox div:first-child {
+  display: flex;
+  gap: 8px;
+}
+
+.secondDiv h3 {
+  margin-top: 40px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  text-align: start;
+}
+
+.secondDiv button {
+  width: 95%;
+  border-radius: 20px;
+  height: 50px;
+  margin-top: 20px;
+  border: none;
+  background: hsl(0, 9%, 12%);
+  color: hsl(0, 0%, 100%, 0.8);
+  font-size: 18px;
+}
+
+.Reaction div:first-child {
+  color: hsl(0, 100%, 67%);
+  font-weight: 300;
+  font-size: 18px;
+}
+.Reaction {
+  background: hsla(0, 100%, 67%, 0.1);
+}
+
+.Visual div:first-child {
+  color: hsl(234, 85%, 45%);
+  font-weight: 300;
+  font-size: 18px;
+}
+.Visual {
+  background: hsla(234, 85%, 45%, 0.1);
+}
+
+.Memory div:first-child {
+  color: hsl(39, 100%, 56%);
+  font-weight: 300;
+  font-size: 18px;
+}
+.Memory {
+  background: hsla(39, 100%, 56%, 0.1);
+}
+
+.Verbal div:first-child {
+  color: hsl(166, 100%, 37%);
+  font-weight: 300;
+  font-size: 18px;
+}
+.Verbal {
+  background: hsla(166, 100%, 37%, 0.1);
+}
+
+.marks span {
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.greyColor {
+  color: gray;
+}
+
+/* - Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%) */
+
+
+
+@media only screen and (max-width: 375px) {
+    .App{
+        height :auto;
+    }
+   .content{
+     display :flex ;
+     flex-direction: column;
+     margin:0;
+     box-shadow: none;
+     height:auto;
+   }
+   .firstDiv{
+     border-top-left-radius: 0;
+     border-top-right-radius: 0;
+   }
+   .firstDiv-footer {
+      margin-bottom : 40px;
+   }
+}
